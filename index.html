@@ -9,26 +9,28 @@
 <body>
   <header>
     <h1>Pulse Tracker Setup Guide</h1>
+    <p>A short guide on how to set up and use your Pulse Tracker</p>
   </header>
-  <main>
-    <section id="introduction">
-      <h2>Introduction</h2>
-      <p>Welcome to the Pulse Tracker setup guide. Follow these steps to set up and use your Pulse Tracker.</p>
-    </section>
-    <section id="requirements">
-      <h2>Requirements</h2>
-      <ul>
-        <li>Arduino board</li>
-        <li>Pulse Sensor</li>
-        <li>LM35 Temperature Sensor</li>
-        <li>SSD1306 OLED Display</li>
-        <li>LEDs</li>
-        <li>Wires and breadboard</li>
-      </ul>
-    </section>
-    <section id="code">
-      <h2>Code</h2>
-      <pre><code id="arduino-code">
+  <div class="container">
+    <main>
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Welcome to the Pulse Tracker setup guide. Follow these steps to set up and use your Pulse Tracker.</p>
+      </section>
+      <section id="requirements">
+        <h2>Requirements</h2>
+        <ul>
+          <li>Arduino board</li>
+          <li>Pulse Sensor</li>
+          <li>LM35 Temperature Sensor</li>
+          <li>SSD1306 OLED Display</li>
+          <li>LEDs</li>
+          <li>Wires and breadboard</li>
+        </ul>
+      </section>
+      <section id="code">
+        <h2>Code</h2>
+        <pre><code id="arduino-code">
 #include <PulseSensorPlayground.h>
 #include "U8glib.h"
 
@@ -84,21 +86,33 @@ void loop() {
   }
   delay(20);
 }
-      </code></pre>
-    </section>
-    <section id="wiring">
-      <h2>Wiring</h2>
-      <p>Follow this wiring diagram to connect your components:</p>
-      <img src="circuit (1).png" alt="Wirin Diagram">
-    </section>
-    <section id="usage">
-      <h2>Usage</h2>
-      <p>Once everything is set up and connected, upload the code to your Arduino and monitor the display for BPM and temperature readings.</p>
-    </section>
-  </main>
+        </code></pre>
+      </section>
+      <section id="wiring">
+        <h2>Wiring</h2>
+        <p>Follow this wiring diagram to connect your components:</p>
+        <img src="circuit (1).png" alt="Wiring Diagram">
+      </section>
+      <section id="usage">
+        <h2>Usage</h2>
+        <p>Once everything is set up and connected, upload the code to your Arduino and monitor the display for BPM and temperature readings.</p>
+      </section>
+    </main>
+    <aside>
+      <h2>TABLE OF CONTENTS</h2>
+      <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#requirements">Requirements</a></li>
+          <li><a href="#code">Code</a></li>
+          <li><a href="#wiring">Wiring</a></li>
+          <li><a href="#usage">Usage</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
   <footer>
     <p>&copy; hehe </p>
   </footer>
-  <script src="scripts.js"></script>
 </body>
 </html>
