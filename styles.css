@@ -1,16 +1,23 @@
+@font-face {
+  font-family: 'TrajanPro';
+  src: url('Trajan Pro Regular.ttf') format('truetype');
+}
+
 body, h1, h2, p, ul {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #121212;
+  font-family: 'TrajanPro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2b2b2b, #121212);
   color: #E0E0E0;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  min-height: 100vh;
 }
 
 header {
@@ -20,17 +27,18 @@ header {
 }
 
 header h1 {
-  font-size: 2.5em;
-  background: linear-gradient(45deg, #ff4081, #ff4081, #f0f, #f0f);
-  background-size: 200% 200%;
+  font-size: 3em;
+  background: linear-gradient(45deg, #ff4081, #f0f);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: transparent; 
+  color: transparent;
   animation: gradient 3s ease infinite;
 }
 
 header p {
   color: #b0bec5;
+  font-size: 1.2em;
 }
 
 header .date {
@@ -47,54 +55,57 @@ header .date {
 main {
   flex: 3;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  padding: 20px;
-  border-radius: 10px;
+  padding: 30px;
+  border-radius: 15px;
   margin-right: 20px;
   position: relative;
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
 aside {
   flex: 1;
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
+  animation: glow 3s ease-in-out infinite alternate;
 }
 
 h2 {
   color: #FF4081;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 ul {
   list-style: none;
-  margin: 10px 0;
-  padding: 0;
+  padding-left: 20px;
 }
 
 ul li {
   margin: 5px 0;
+  font-size: 1.1em;
 }
 
 ul li a {
   color: #E0E0E0;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 ul li a:hover {
-  text-decoration: underline;
+  color: #ff4081;
 }
 
 pre {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(0, 0, 0, 0.85);
   color: #f8f8f2;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   overflow-x: auto;
-  font-size: 14px;
+  font-size: 1em;
 }
 
 pre code {
@@ -103,14 +114,25 @@ pre code {
 
 footer {
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  padding: 10px;
+  padding: 15px;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 15px;
   margin-top: 20px;
   width: 100%;
   max-width: 1200px;
+  animation: glow 3s ease-in-out infinite alternate;
+  font-size: 0.9em;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081;
+  }
+  to {
+    box-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081;
+  }
 }
 
 @keyframes gradient {

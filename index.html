@@ -88,14 +88,48 @@ void loop() {
 }
         </code></pre>
       </section>
+      <section id="explanation">
+        <h2>Code Explanation</h2>
+        <p>The code above does the following:</p>
+        <ul>
+          <li>Includes the necessary libraries for the Pulse Sensor and OLED display.</li>
+          <li>Sets up the display, Pulse Sensor, and temperature sensor.</li>
+          <li>Defines the pin connections and threshold values.</li>
+          <li>In the <code>draw</code> function, it prints the BPM and temperature on the OLED display.</li>
+          <li>In the <code>setup</code> function, it initializes serial communication, sets up the pins, and starts the Pulse Sensor.</li>
+          <li>In the <code>loop</code> function, it updates the display with the latest BPM and temperature readings and controls the LEDs based on the temperature.</li>
+        </ul>
+      </section>
+      <section id="libraries">
+        <h2>Installing Libraries</h2>
+        <p>To run this code, you need to install the following libraries:</p>
+        <ul>
+          <li><a href="https://github.com/WorldFamousElectronics/PulseSensorPlayground" target="_blank">PulseSensorPlayground</a></li>
+          <li><a href="https://github.com/olikraus/u8glib" target="_blank">U8glib</a></li>
+        </ul>
+        <p>To install these libraries, follow these steps:</p>
+        <ol>
+          <li>Open the Arduino IDE.</li>
+          <li>Go to <em>Sketch</em> &gt; <em>Include Library</em> &gt; <em>Manage Libraries...</em></li>
+          <li>In the Library Manager, search for the library names above and click <em>Install</em>.</li>
+        </ol>
+      </section>
+      <section id="arduino-ide">
+        <h2>Arduino IDE</h2>
+        <p>If you don't have the Arduino IDE installed, you can download it from the official Arduino website: <a href="https://www.arduino.cc/en/software" target="_blank">Download Arduino IDE</a>.</p>
+      </section>
       <section id="wiring">
         <h2>Wiring</h2>
         <p>Follow this wiring diagram to connect your components:</p>
-        <img src="circuit (1).png" alt="Wiring Diagram">
+        <img src="circuit.png" alt="Wiring Diagram">
       </section>
       <section id="usage">
         <h2>Usage</h2>
         <p>Once everything is set up and connected, upload the code to your Arduino and monitor the display for BPM and temperature readings.</p>
+      </section>
+      <section id="repository">
+        <h2>GitHub Repository</h2>
+        <p>You can find the complete project and source code on GitHub: <a href="https://github.com/samratbose10/pulsetracker" target="_blank">PulseTracker GitHub Repository</a></p>
       </section>
     </main>
     <aside>
@@ -105,8 +139,12 @@ void loop() {
           <li><a href="#introduction">Introduction</a></li>
           <li><a href="#requirements">Requirements</a></li>
           <li><a href="#code">Code</a></li>
+          <li><a href="#explanation">Code Explanation</a></li>
+          <li><a href="#libraries">Installing Libraries</a></li>
+          <li><a href="#arduino-ide">Arduino IDE</a></li>
           <li><a href="#wiring">Wiring</a></li>
           <li><a href="#usage">Usage</a></li>
+          <li><a href="#repository">GitHub Repository</a></li>
         </ul>
       </nav>
     </aside>
